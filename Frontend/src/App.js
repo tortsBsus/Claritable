@@ -12,7 +12,7 @@ export default function App() {
     const [allMess, setAllMess] = useState([]);
     const [checkz, setCheckz] = useState(false);
     const [currentAccount, setCurrentAccount] = useState("");
-    const contractAddress = "0x6F7cb620aB7C9692a2d17696Ea914E96af10FacD";
+    const contractAddress = "0x7013C014bDec413cD873e97740F58E2Ba821Af70";
     const contractABI = abi.abi;
 
     //function1

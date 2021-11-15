@@ -42,6 +42,7 @@ contract AlienPoll {
         console.log("\nAlien face all the way! %s is face gang!", msg.sender);
         messes.push(Mess(msg.sender, _message, block.timestamp,"Alien face"));
         emit VoteMessage(msg.sender, block.timestamp, _message, "Alien face");
+        bonus(1);
 
     }    
     function getFaceCount() public view returns (uint)
@@ -58,9 +59,32 @@ contract AlienPoll {
         console.log("\nAlien ship all the way! %s is ship gang!", msg.sender);
         messes.push(Mess(msg.sender, _message, block.timestamp,"Alien ship"));
         emit VoteMessage(msg.sender, block.timestamp, _message, "Alien ship");
-    }    
 
-    function bonus() public{
+        bonus(0);
+    } 
+
+    function getShipCount() public view returns (uint)
+    {
+        console.log("%d entities have chosen ship!", ship);
+        return ship;
+    }   
+
+    function bonus(uint8 choice) public{
+
+        if(getFaceCount()>getShipCount())
+        {
+            if(!(choice == 1))
+            {
+                return;
+            }
+        }
+        else 
+        {
+            if(!(choice == 0))
+            {
+                return;
+            }
+        }
          seed = (block.difficulty + block.timestamp + seed) % 100;
 
         if (seed <= 50) {
