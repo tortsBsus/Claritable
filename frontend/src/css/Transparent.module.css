@@ -29,14 +29,20 @@
 .tRACKDiv {
   position: absolute;
   top: 56px;
-  left: 1527px;
   line-height: 103.5%;
   display: inline-block;
 }
+.hOMEDiv {
+  left: 1527px;
+  cursor: pointer;
+}
 .cHARITYDiv,
 .tRACKDiv {
-  left: 1762px;
   letter-spacing: 0.09em;
+}
+.cHARITYDiv {
+  left: 1762px;
+  cursor: pointer;
 }
 .tRACKDiv {
   left: 1647px;
@@ -52,6 +58,116 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+}
+.myAddress,
+.nameOfCharity {
+  position: absolute;
+  top: 11px;
+  left: 14px;
+  letter-spacing: -0.06em;
+  line-height: 97%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width: 104px;
+  height: 37px;
+}
+.nameOfCharity {
+  top: 56px;
+}
+.fOODDiv {
+  top: 114px;
+  left: 14px;
+  display: inline-block;
+}
+.fOODDiv,
+.mEDICINEDiv,
+.moneyLEFT {
+  position: absolute;
+  letter-spacing: -0.06em;
+  line-height: 97%;
+  text-transform: uppercase;
+}
+.mEDICINEDiv {
+  top: 114px;
+  left: 208px;
+  display: inline-block;
+}
+.moneyLEFT {
+  width: calc(100% - 1198px);
+  top: 6px;
+  right: 210px;
+  left: 988px;
+  display: flex;
+  align-items: center;
+  height: 37px;
+}
+.x9c820c0412BDB5aee3175ACad7963Div {
+  position: absolute;
+  top: 22px;
+  left: 118px;
+  width: 348px;
+}
+.div,
+.div1,
+.eFJEIOJFOWJEFEJFIEJFDiv,
+.x9c820c0412BDB5aee3175ACad7963Div {
+  letter-spacing: -0.06em;
+  line-height: 97%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  height: 16px;
+}
+.eFJEIOJFOWJEFEJFIEJFDiv {
+  position: absolute;
+  top: 66px;
+  left: 118px;
+  width: 348px;
+}
+.div,
+.div1 {
+  width: 51px;
+}
+.div {
+  position: absolute;
+  top: 16px;
+  left: 1102px;
+}
+.div1 {
+  top: 114px;
+  left: 118px;
+}
+.div1,
+.div2,
+.trackdiv {
+  position: absolute;
+}
+.div2 {
+  top: 114px;
+  left: 313px;
+  letter-spacing: -0.06em;
+  line-height: 97%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width: 51px;
+  height: 16px;
+}
+.trackdiv {
+  top: 223px;
+  left: calc(50% - 651px);
+  background: linear-gradient(
+    90.07deg,
+    #f85900 6.28%,
+    #cfc1c1 34.72%,
+    rgba(212, 37, 37, 0.75)
+  );
+  width: 1302px;
+  height: 162px;
+  font-size: 16px;
+  color: #000;
+  font-family: Federo;
 }
 .transparentDiv {
   position: relative;
