@@ -88,6 +88,7 @@ export const Desktop2: FunctionComponent = () => {
   const navigate = useNavigate();
 
   const onDONATENOWTextClick = useCallback(() => {
+    connectWallet();
     navigate("/charities");
   }, [navigate]);
   const onABOUTUSTEXTClick = useCallback(() => {
