@@ -1,0 +1,189 @@
+.rectangleIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 106px;
+}
+.cLARITABLSpan {
+  letter-spacing: 0.42em;
+}
+.eSpan {
+  letter-spacing: 0.6em;
+}
+.cLARITABLEDiv {
+  position: absolute;
+  top: 53px;
+  left: 91px;
+  line-height: 103.5%;
+  text-align: center;
+  display: inline-block;
+  width: 185px;
+  height: 21px;
+}
+.hOMESpan {
+  letter-spacing: 0.09em;
+}
+.cHARITYDiv,
+.hOMEDiv,
+.tRACKDiv {
+  position: absolute;
+  top: 56px;
+  left: 1527px;
+  line-height: 103.5%;
+  display: inline-block;
+}
+.cHARITYDiv,
+.tRACKDiv {
+  left: 1762px;
+  letter-spacing: 0.09em;
+  color: #c36668;
+}
+.tRACKDiv {
+  left: 1647px;
+  color: #fff;
+}
+.frameDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1900px;
+  height: 106px;
+  text-align: left;
+  color: #e9e9e9;
+  font-family: Exo 2;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 378px;
+  left: 81px;
+  background-color: rgba(217, 217, 217, 0.51);
+  width: 298px;
+  height: 93px;
+}
+.rAISENOWDiv {
+  position: absolute;
+  top: 399px;
+  left: 125px;
+  letter-spacing: 0.29em;
+  line-height: 103.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 205px;
+  height: 46px;
+}
+.frameDiv1,
+.rectangleDiv1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 461px;
+}
+.rectangleDiv1 {
+  background: linear-gradient(
+    90deg,
+    #3b384a 11.31%,
+    rgba(117, 68, 23, 0.69) 46.18%,
+    rgba(235, 208, 208, 0.11)
+  );
+  height: 267px;
+}
+.frameDiv1 {
+  background-color: rgba(159, 15, 15, 0.61);
+  height: 595px;
+  overflow: hidden;
+}
+.eDUCATIONDiv {
+  position: absolute;
+  top: 117px;
+  left: 54px;
+  font-size: 32px;
+  letter-spacing: 0.62em;
+  line-height: 103.5%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  width: 390px;
+}
+.cARD1Div,
+.frameDiv3 {
+  position: absolute;
+  height: 595px;
+}
+.cARD1Div {
+  width: calc(100% - 1439px);
+  top: 220px;
+  right: 1348px;
+  left: 91px;
+}
+.frameDiv3 {
+  top: 0;
+  left: 0;
+  background-color: #610909;
+  width: 461px;
+  overflow: hidden;
+}
+.gIRLCHILDEMPOWERMENT {
+  position: absolute;
+  top: 78px;
+  left: 35px;
+  font-size: 30px;
+  letter-spacing: 0.51em;
+  line-height: 182.5%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  width: 390px;
+}
+.cARD2Div,
+.frameDiv2 {
+  position: absolute;
+  height: 595px;
+}
+.frameDiv2 {
+  top: 0;
+  left: 0;
+  width: 461px;
+}
+.cARD2Div {
+  width: calc(100% - 1439px);
+  top: 220px;
+  right: 719px;
+  left: 720px;
+  background-color: #010000;
+  overflow: hidden;
+}
+.sENDHELPTOUKRAINE {
+  position: absolute;
+  top: 86px;
+  left: 35px;
+  font-size: 32px;
+  letter-spacing: 0.6em;
+  line-height: 147.5%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  width: 390px;
+}
+.cARD3Div {
+  position: absolute;
+  width: calc(100% - 1439px);
+  top: 220px;
+  right: 94px;
+  left: 1345px;
+  background-color: #010000;
+  height: 595px;
+  overflow: hidden;
+}
+.charitiesDiv {
+  position: relative;
+  background-color: #000;
+  width: 100%;
+  height: 940.61px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-family: Federo;
+}

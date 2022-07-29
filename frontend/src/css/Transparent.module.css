@@ -1,0 +1,66 @@
+.rectangleIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 106px;
+}
+.cLARITABLSpan {
+  letter-spacing: 0.42em;
+}
+.eSpan {
+  letter-spacing: 0.6em;
+}
+.cLARITABLEDiv {
+  position: absolute;
+  top: 53px;
+  left: 91px;
+  line-height: 103.5%;
+  text-align: center;
+  display: inline-block;
+  width: 185px;
+  height: 21px;
+}
+.hOMESpan {
+  letter-spacing: 0.09em;
+}
+.cHARITYDiv,
+.hOMEDiv,
+.tRACKDiv {
+  position: absolute;
+  top: 56px;
+  left: 1527px;
+  line-height: 103.5%;
+  display: inline-block;
+}
+.cHARITYDiv,
+.tRACKDiv {
+  left: 1762px;
+  letter-spacing: 0.09em;
+}
+.tRACKDiv {
+  left: 1647px;
+  color: #893235;
+}
+.frameDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1900px;
+  height: 106px;
+  background-image: url(../../public/frame-4@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.transparentDiv {
+  position: relative;
+  background-color: #000;
+  width: 100%;
+  height: 940.61px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 20px;
+  color: #e9e9e9;
+  font-family: Exo 2;
+}

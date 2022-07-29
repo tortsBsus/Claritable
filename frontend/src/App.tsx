@@ -5,6 +5,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import { Desktop1 } from "./Desktop1";
+import { Charities } from "./Charities";
+import { Aboutus } from "./Aboutus";
+import { Transparent } from "./Transparent";
 import { Desktop2 } from "./Desktop2";
 import { useEffect } from "react";
 
@@ -26,6 +29,18 @@ function App() {
     //TODO: Update meta titles and descriptions below
     switch (pathname) {
       case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/charities":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/aboutus":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/transparent":
         title = "";
         metaDescription = "";
         break;
@@ -52,6 +67,12 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Desktop1 />} />
+
+      <Route path="/charities" element={<Charities />} />
+
+      <Route path="/aboutus" element={<Aboutus />} />
+
+      <Route path="/transparent" element={<Transparent />} />
 
       <Route path="/desktop-2" element={<Desktop2 />} />
     </Routes>

@@ -1,40 +1,46 @@
-.root {
-  position: relative;
-  width: 1900px;
-  height: 940.6136px;
-  align-items: flex-start;
-  background-color: #0b040c;
-  overflow: hidden;
-}
-.unsplashDVcXOkpp3fk {
+.unsplashdVcXOkpp3fkIcon {
   position: absolute;
-  left: 0;
+  height: calc(100% - -11px);
+  width: 100%;
   top: 0;
-  width: 1900px;
-  height: 952px;
-  
-  background-image:/* webpackIgnore: true */ url('unsplashdvcxokpp3fk@2x.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
- 
+  right: 0;
+  bottom: -11px;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
-
-
+.cLARITABLESpan {
+  line-height: 118.5%;
+}
+.span {
+  font-size: 20px;
+  line-height: 116.35%;
+}
+.cLARITABLETxtSpan {
+  line-break: anywhere;
+  width: 100%;
+}
 .cLARITABLEDiv {
   position: absolute;
-  top: 40%;
-  left: 40%;
-
-  letter-spacing: 0.68em;
-  font-size: 200px;
-  font-weight:bolder;
+  height: calc(100% - 801px);
+  top: 406px;
+  bottom: 395px;
+  left: calc(50% - 572px);
+  letter-spacing: 0.61em;
   display: flex;
-  font-family: 'federo';
   align-items: center;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  width: 1198px;
+  width: 1225px;
+  cursor: pointer;
 }
-
+.desktop1 {
+  position: relative;
+  background-color: #0b040c;
+  width: 100%;
+  height: 941px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 96px;
+  color: #fff;
+  font-family: Federo;
+}
