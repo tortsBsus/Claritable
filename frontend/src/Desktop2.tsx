@@ -10,7 +10,7 @@ declare let window: any;
 export const Desktop2: FunctionComponent = () => {
   const [currentAccount, setCurrentAccount] = useState("");
 
-  //
+  //checks if a wallet is connected to the application
   const checkIfWalletIsConnected = async () => {    
 
     try {
@@ -38,7 +38,7 @@ export const Desktop2: FunctionComponent = () => {
     }
   };
 
-  //function2
+  //function to connect wallet to application
   const connectWallet = async () => {
     try {
       const { ethereum } = window;
@@ -101,6 +101,7 @@ export const Desktop2: FunctionComponent = () => {
   }, []);
 
   const onDONATENOWText1Click = useCallback(() => {
+    connectWallet();
     navigate("/charities");
   }, [navigate]);
 
