@@ -1,9 +1,90 @@
 import { FunctionComponent, useCallback } from "react";
-
+import { useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./css/Desktop2.module.css";
+//import ( ethers ) from "ethers";
+declare let window: any;
+
 
 export const Desktop2: FunctionComponent = () => {
+  const [currentAccount, setCurrentAccount] = useState("");
+
+  //
+  const checkIfWalletIsConnected = async () => {    
+
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        console.log("Make sure you have metamask!");
+        return;
+      } else {
+        console.log("We have the ethereum object", ethereum);
+      }
+
+      const accounts = await ethereum.request({ method: "eth_accounts" });
+
+      if (accounts.length !== 0) {
+        const account = accounts[0];
+        console.log("Found an authorized account:", account);
+        setCurrentAccount(account);
+        console.log(currentAccount);
+      } else {
+        console.log("No authorized account found");
+      }
+    } catch (error) {
+      console.log("errorzzzzz" + error);
+    }
+  };
+
+  //function2
+  const connectWallet = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        alert("Get MetaMask!");
+        return;
+      }
+
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+
+      console.log("Connected", accounts[0]);
+      setCurrentAccount(accounts[0]);
+    } catch (error) {
+      console.log("errorz" + error);
+    }
+  };
+
+
+
+
+
+  //runs only on the first render
+  useEffect(() => {
+    checkIfWalletIsConnected();
+  }, []);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const navigate = useNavigate();
 
   const onDONATENOWTextClick = useCallback(() => {
@@ -54,6 +135,27 @@ export const Desktop2: FunctionComponent = () => {
     }
   }, []);
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   return (
     <div className={styles.desktop2}>
       <div className={styles.pAGE3Div} onClick={onPAGE3ContainerClick}>
@@ -161,8 +263,8 @@ export const Desktop2: FunctionComponent = () => {
           src="unsplashuapaem7miqq2@2x.png"
         />
         <div className={styles.dONATENOWDiv1} onClick={onDONATENOWText1Click}>
-            DONATE NOW
-          </div>
+          DONATE NOW
+        </div>
       </div>
       <div className={styles.pAGE1Div}>
         <img
@@ -173,7 +275,9 @@ export const Desktop2: FunctionComponent = () => {
         <div className={styles.frameDiv8} onClick={onFrameContainer7Click}>
           <div className={styles.aboutusDiv}>
             <div className={styles.rectangleDiv} />
-            <div className={styles.aBOUTUSDiv }onClick={onABOUTUSTEXTClick}>ABOUT US</div>
+            <div className={styles.aBOUTUSDiv} onClick={onABOUTUSTEXTClick}>
+              ABOUT US
+            </div>
           </div>
           <div
             className={styles.nowYouCanDonateWithATrus}
@@ -182,7 +286,6 @@ export const Desktop2: FunctionComponent = () => {
             LEND A HAND TO BRING A SMILE
           </div>
           <div className={styles.frameDiv9}>
-            
             <div className={styles.cLARITABLEDiv}>
               <span className={styles.cLARITABLSpan}>CLARITABL</span>
               <span className={styles.eSpan}>E</span>
