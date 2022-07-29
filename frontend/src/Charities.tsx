@@ -1,7 +1,11 @@
 import { FunctionComponent } from "react";
+import { Button } from "react-bootstrap";
+import ReactDOM from "react-dom";
 import styles from "./css/Charities.module.css";
+import Popup from "reactjs-popup";
 
 export const Charities: FunctionComponent = () => {
+  
   return (
     <div className={styles.charitiesDiv}>
       <div className={styles.frameDiv}>
@@ -20,7 +24,7 @@ export const Charities: FunctionComponent = () => {
       <div className={styles.cARD1Div}>
         <div className={styles.frameDiv1}>
           <div className={styles.rectangleDiv} />
-          <div className={styles.rAISENOWDiv}>RAISE NOW</div>
+          <Popup modal trigger={<Button className={styles.rAISENOWDiv}>RAISE NOW</Button>}>Raise</Popup>
           <div className={styles.rectangleDiv1} />
         </div>
         <div className={styles.eDUCATIONDiv}>EDUCATION</div>
@@ -30,7 +34,7 @@ export const Charities: FunctionComponent = () => {
           <div className={styles.frameDiv3}>
             <div className={styles.rectangleDiv} />
             <div className={styles.rectangleDiv1} />
-            <div className={styles.rAISENOWDiv}>RAISE NOW</div>
+            <Button className={styles.rAISENOWDiv}>RAISE NOW</Button>
           </div>
           <div className={styles.gIRLCHILDEMPOWERMENT}>
             GIRL CHILD EMPOWERMENT
@@ -41,7 +45,7 @@ export const Charities: FunctionComponent = () => {
         <div className={styles.frameDiv2}>
           <div className={styles.frameDiv3}>
             <div className={styles.rectangleDiv} />
-            <div className={styles.rAISENOWDiv}>RAISE NOW</div>
+            <Button className={styles.rAISENOWDiv}>RAISE NOW</Button>
             <div className={styles.rectangleDiv1} />
           </div>
           <div className={styles.sENDHELPTOUKRAINE}>SEND HELP TO UKRAINE</div>
@@ -50,3 +54,5 @@ export const Charities: FunctionComponent = () => {
     </div>
   );
 };
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Charities />, rootElement);
