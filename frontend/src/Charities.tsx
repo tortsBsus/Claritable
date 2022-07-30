@@ -70,7 +70,7 @@ export const Charities: FunctionComponent = () => {
       <div className={styles.cARD1Div}>
         <div className={styles.frameDiv1}>
           <div className={styles.rectangleDiv}>
-            <input
+            <input className={styles.input}
               type="number"
               min="1"
               value={num}
@@ -90,7 +90,7 @@ export const Charities: FunctionComponent = () => {
           <div className={styles.frameDiv3}>
             <div className={styles.rectangleDiv1} />
             <div className={styles.rectangleDiv}>
-              <input
+              <input className={styles.input}
                 type="number"
                 min="1"
                 value={num1}
@@ -109,7 +109,7 @@ export const Charities: FunctionComponent = () => {
         <div className={styles.frameDiv2}>
           <div className={styles.frameDiv3}>
             <div className={styles.rectangleDiv}>
-              <input
+              <input className={styles.input}
                 type="number"
                 min="1"
                 value={num2}

@@ -136,6 +136,11 @@
   align-items: center;
   width: 390px;
 }
+.input {
+   position: relative;
+    top: 80px;
+    height: 20px;
+}
 .cARD2Div,
 .frameDiv2 {
   position: absolute;

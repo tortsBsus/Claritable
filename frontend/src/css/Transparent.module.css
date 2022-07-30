@@ -159,12 +159,17 @@
   left: calc(50% - 651px);
   background: linear-gradient(
     90.07deg,
-    #f85900 6.28%,
-    #cfc1c1 34.72%,
-    rgba(212, 37, 37, 0.75)
+    #f45469 6.28%,
+    
+    rgba(194, 194, 207, 0.75)
   );
+  letter-spacing: -0.06em;
+  line-height: 97%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
   width: 1302px;
-  height: 162px;
+  height: 62px;
   font-size: 16px;
   color: #000;
   font-family: Federo;

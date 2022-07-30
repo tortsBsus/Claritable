@@ -29,22 +29,13 @@ export const Transparent: FunctionComponent = () => {
           CHARITY
         </div>
         <div className={styles.tRACKDiv}>TRACK</div>
+        
       </div>
-      <div className={styles.trackdiv}>
-        <div className={styles.myAddress}>My Address :</div>
-        <div className={styles.nameOfCharity}>Name of charity :</div>
-        <div className={styles.fOODDiv}>FOOD :</div>
-        <div className={styles.mEDICINEDiv}>MEDICINE :</div>
-        <div className={styles.moneyLEFT}>Money LEFT :</div>
-        <div className={styles.x9c820c0412BDB5aee3175ACad7963Div}>
-          0x9c820c0412BDB5aee3175ACad79631C097C0081C
-        </div>
-        <div className={styles.eFJEIOJFOWJEFEJFIEJFDiv}>
-          EFJEIOJFOWJEFEJFIEJF
-        </div>
-        <div className={styles.div}>81</div>
-        <div className={styles.div1}>81</div>
-        <div className={styles.div2}>81</div>
+      <div className={styles.trackdiv} style={{  justifyContent: "space-between" }}>
+       Please click on the button  to redirect to view all the transactions
+       <a href="https://rinkeby.etherscan.io/address/0x7013C014bDec413cD873e97740F58E2Ba821Af70" target="_blank" rel="noreferrer">
+                  TRANSACTIONS 
+        </a>
       </div>
     </div>
   );
