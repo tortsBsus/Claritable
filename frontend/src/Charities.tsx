@@ -60,12 +60,7 @@ export const Charities: FunctionComponent = () => {
           <span className={styles.cLARITABLSpan}>CLARITABL</span>
           <span className={styles.eSpan}>E</span>
         </div>
-        <div className={styles.hOMEDiv}>
-          <span className={styles.hOMESpan}>HOME</span>
-          <span className={styles.cLARITABLSpan}>{` `}</span>
-        </div>
-        <div className={styles.cHARITYDiv}>CHARITY</div>
-        <div className={styles.tRACKDiv}>TRACK</div>
+      
       </div>
       <div className={styles.cARD1Div}>
         <div className={styles.frameDiv1}>
