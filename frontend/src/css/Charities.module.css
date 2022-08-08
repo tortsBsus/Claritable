@@ -44,6 +44,9 @@
   color: #fff;
 }
 .frameDiv {
+
+  /* border: pink 20px solid; */
+
   position: absolute;
   top: 0;
   left: 0;
@@ -73,6 +76,8 @@
   width: 205px;
   height: 46px;
 }
+
+
 .frameDiv1,
 .rectangleDiv1 {
   position: absolute;
@@ -90,6 +95,7 @@
   height: 267px;
 }
 .frameDiv1 {
+  /* border: cyan 20px solid; */
   background-color: rgba(159, 15, 15, 0.61);
   height: 595px;
   overflow: hidden;
@@ -143,10 +149,12 @@
 }
 .cARD2Div,
 .frameDiv2 {
+  
   position: absolute;
   height: 595px;
 }
 .frameDiv2 {
+  /* border: greenyellow 20px solid; */
   top: 0;
   left: 0;
   width: 461px;
@@ -181,7 +189,13 @@
   height: 595px;
   overflow: hidden;
 }
+
+
+
 .charitiesDiv {
+  display: flex;
+  /* border: blue 20px solid; */
+
   position: relative;
   background-color: #000;
   width: 100%;
@@ -191,4 +205,27 @@
   font-size: 20px;
   color: #fff;
   font-family: Federo;
+}
+
+.connectNowButton {
+
+  /* border: green 20px solid; */
+
+  position: absolute;
+  top: 499px;
+  left: 125px;
+  letter-spacing: 0.29em;
+  line-height: 103.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 205px;
+  height: 46px;
+  color:pink;
+}
+
+.testing{
+  display: flex;
+  /* border: yellow 20px solid; */
+  flex-direction: row;
 }
