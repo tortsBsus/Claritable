@@ -1,99 +1,11 @@
 import { connect } from "http2";
 import { FunctionComponent, useCallback } from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavigateOptions, useNavigate, Link } from "react-router-dom";
 import styles from "./css/Desktop2.module.css";
 //import ( ethers ) from "ethers";
-declare let window: any;
 
 
 export const Desktop2: FunctionComponent = () => {
-
-  const [currentAccount, setCurrentAccount] = useState("");
-
-  //checks if a wallet is connected to the application => the window ethereum object is present
-  const checkIfWalletIsConnected = async () => {
-
-    console.log("Before connecting, currentAccount =" + currentAccount);
-    let account;
-    try {
-      const { ethereum } = window;
-
-      if (!ethereum) {
-        console.log("Make sure you have metamask!");
-        return;
-      } else {
-        console.log("We have the ethereum object", ethereum);
-      }
-
-      const accounts = await ethereum.request({ method: "eth_accounts" });
-
-      if (accounts.length !== 0) {
-        account = accounts[0];
-        console.log("Found an authorized account:", account);
-        setCurrentAccount(account);
-      } else {
-        console.log("No authorized account found");
-      }
-    } catch (error) {
-      console.log("errorzzzzz" + error);
-    }
-    console.log("currentaccount = "+currentAccount);
-
-  };
-
-
-
-
-  //function to connect wallet to application
-  const connectWallet = async () => {
-    let account;
-    try {
-      const { ethereum } = window;
-
-      if (!ethereum) {
-        alert("Get MetaMask!");
-        return;
-      }
-
-      const accounts = await ethereum.request({
-        method: "eth_requestAccounts",
-      });
-      account = accounts[0];
-      setCurrentAccount(account);
-      navigate("/charities");
-    } catch (error) {
-      console.log("errorz" + error);
-    }
-    console.log("currentaccount ="+currentAccount);
-    
-  };
-
-
-
-
-
-  //runs only on the first render
-  useEffect(() => {
-    checkIfWalletIsConnected();
-  }, []);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   const navigate = useNavigate();
@@ -202,7 +114,7 @@ export const Desktop2: FunctionComponent = () => {
         </div>
         <div className={styles.frameDiv2}>
           <div className={styles.rectangleDiv} />
-          <div className={styles.dONATENOWDiv} onClick={()=>{connectWallet()}}>
+          <div className={styles.dONATENOWDiv} onClick={()=>{navigate("/charities");}}>
             DONATE NOW
           </div>
         </div>
@@ -233,7 +145,7 @@ export const Desktop2: FunctionComponent = () => {
         </div>
         <div className={styles.frameDiv5}>
           <div className={styles.rectangleDiv} />
-          <div className={styles.dONATENOWDiv2} onClick={()=>{connectWallet()}}>
+          <div className={styles.dONATENOWDiv2} onClick={()=>{navigate("/charities");}}>
             DONATE NOW
           </div>
         </div>
@@ -278,7 +190,7 @@ export const Desktop2: FunctionComponent = () => {
           alt=""
           src="unsplashuapaem7miqq2@2x.png"
         />
-        <div className={styles.dONATENOWDiv1} onClick={()=>{connectWallet()}}>
+        <div className={styles.dONATENOWDiv1} onClick={()=>{navigate("/charities");}}>
           DONATE NOW
         </div>
       </div>
@@ -310,7 +222,7 @@ export const Desktop2: FunctionComponent = () => {
               <span className={styles.hOMESpan}>HOME</span>
               <span className={styles.cLARITABLSpan}>{` `}</span>
             </div>
-            <div className={styles.cHARITYDiv} onClick={()=>{connectWallet()}}>
+            <div className={styles.cHARITYDiv} onClick={()=>{navigate("/charities");}}>
               CHARITY
             </div>
             <div className={styles.tRACKDiv} onClick={onTRACKTextClick}>
