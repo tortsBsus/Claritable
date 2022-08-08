@@ -1,3 +1,4 @@
+import { connect } from "http2";
 import { FunctionComponent, useCallback } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -8,11 +9,14 @@ declare let window: any;
 
 
 export const Desktop2: FunctionComponent = () => {
+
   const [currentAccount, setCurrentAccount] = useState("");
 
-  //checks if a wallet is connected to the application
-  const checkIfWalletIsConnected = async () => {    
+  //checks if a wallet is connected to the application => the window ethereum object is present
+  const checkIfWalletIsConnected = async () => {
 
+    console.log("Before connecting, currentAccount =" + currentAccount);
+    let account;
     try {
       const { ethereum } = window;
 
@@ -26,20 +30,25 @@ export const Desktop2: FunctionComponent = () => {
       const accounts = await ethereum.request({ method: "eth_accounts" });
 
       if (accounts.length !== 0) {
-        const account = accounts[0];
+        account = accounts[0];
         console.log("Found an authorized account:", account);
         setCurrentAccount(account);
-        console.log(currentAccount);
       } else {
         console.log("No authorized account found");
       }
     } catch (error) {
       console.log("errorzzzzz" + error);
     }
+    console.log("currentaccount = "+currentAccount);
+
   };
+
+
+
 
   //function to connect wallet to application
   const connectWallet = async () => {
+    let account;
     try {
       const { ethereum } = window;
 
@@ -51,12 +60,14 @@ export const Desktop2: FunctionComponent = () => {
       const accounts = await ethereum.request({
         method: "eth_requestAccounts",
       });
-
-      console.log("Connected", accounts[0]);
-      setCurrentAccount(accounts[0]);
+      account = accounts[0];
+      setCurrentAccount(account);
+      navigate("/charities");
     } catch (error) {
       console.log("errorz" + error);
     }
+    console.log("currentaccount ="+currentAccount);
+    
   };
 
 
@@ -87,13 +98,23 @@ export const Desktop2: FunctionComponent = () => {
 
   const navigate = useNavigate();
 
-  const onDONATENOWTextClick = useCallback(() => {
-    connectWallet();
-    navigate("/charities");
-  }, [navigate]);
-  const onABOUTUSTEXTClick = useCallback(() => {
-    navigate("/aboutus");
-  }, [navigate]);
+  // const onDONATENOWTextClick = useCallback(() => {
+  // navigate("/charities");
+  // }, [navigate]);
+
+  // const onDONATENOWText1Click = useCallback(() => {
+  //     navigate("/charities");
+   // }, [navigate]);
+
+  // const onCHARITYTextClick = useCallback(() => {
+  //     navigate("/charities");
+  // }, [navigate]);
+
+  // const onABOUTUSTEXTClick = useCallback(() => {
+  //   navigate("/aboutus");
+  // }, [navigate]);
+
+
   const onPAGE3ContainerClick = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='frameContainer1']");
     if (anchor) {
@@ -101,10 +122,6 @@ export const Desktop2: FunctionComponent = () => {
     }
   }, []);
 
-  const onDONATENOWText1Click = useCallback(() => {
-    connectWallet();
-    navigate("/charities");
-  }, [navigate]);
 
   const onPAGE4ContainerClick = useCallback(() => {
     const anchor = document.querySelector(
@@ -122,9 +139,6 @@ export const Desktop2: FunctionComponent = () => {
     }
   }, []);
 
-  const onCHARITYTextClick = useCallback(() => {
-    navigate("/charities");
-  }, [navigate]);
 
   const onTRACKTextClick = useCallback(() => {
     navigate("/transparent");
@@ -137,27 +151,27 @@ export const Desktop2: FunctionComponent = () => {
     }
   }, []);
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className={styles.desktop2}>
       <div className={styles.pAGE3Div} onClick={onPAGE3ContainerClick}>
@@ -188,7 +202,7 @@ export const Desktop2: FunctionComponent = () => {
         </div>
         <div className={styles.frameDiv2}>
           <div className={styles.rectangleDiv} />
-          <div className={styles.dONATENOWDiv} onClick={onDONATENOWTextClick}>
+          <div className={styles.dONATENOWDiv} onClick={()=>{connectWallet()}}>
             DONATE NOW
           </div>
         </div>
@@ -219,7 +233,7 @@ export const Desktop2: FunctionComponent = () => {
         </div>
         <div className={styles.frameDiv5}>
           <div className={styles.rectangleDiv} />
-          <div className={styles.dONATENOWDiv2} onClick={onDONATENOWText1Click}>
+          <div className={styles.dONATENOWDiv2} onClick={()=>{connectWallet()}}>
             DONATE NOW
           </div>
         </div>
@@ -264,7 +278,7 @@ export const Desktop2: FunctionComponent = () => {
           alt=""
           src="unsplashuapaem7miqq2@2x.png"
         />
-        <div className={styles.dONATENOWDiv1} onClick={onDONATENOWText1Click}>
+        <div className={styles.dONATENOWDiv1} onClick={()=>{connectWallet()}}>
           DONATE NOW
         </div>
       </div>
@@ -277,7 +291,7 @@ export const Desktop2: FunctionComponent = () => {
         <div className={styles.frameDiv8} onClick={onFrameContainer7Click}>
           <div className={styles.aboutusDiv}>
             <div className={styles.rectangleDiv} />
-            <div className={styles.aBOUTUSDiv} onClick={onABOUTUSTEXTClick}>
+            <div className={styles.aBOUTUSDiv} onClick={()=>{navigate("/aboutus");}}>
               ABOUT US
             </div>
           </div>
@@ -296,7 +310,7 @@ export const Desktop2: FunctionComponent = () => {
               <span className={styles.hOMESpan}>HOME</span>
               <span className={styles.cLARITABLSpan}>{` `}</span>
             </div>
-            <div className={styles.cHARITYDiv} onClick={onCHARITYTextClick}>
+            <div className={styles.cHARITYDiv} onClick={()=>{connectWallet()}}>
               CHARITY
             </div>
             <div className={styles.tRACKDiv} onClick={onTRACKTextClick}>
