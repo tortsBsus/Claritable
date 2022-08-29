@@ -155,19 +155,14 @@
   height: 16px;
 }
 .trackdiv {
-  top: 223px;
-  left: calc(50% - 651px);
-  background: linear-gradient(
-    90.07deg,
-    #f45469 6.28%,
-    
-    rgba(194, 194, 207, 0.75)
-  );
+  
+  display: flex;
+  margin: 15%;
+  align-items: center;
+  justify-content: center;
   letter-spacing: -0.06em;
   line-height: 97%;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
   width: 1302px;
   height: 62px;
   font-size: 16px;
@@ -184,4 +179,30 @@
   font-size: 20px;
   color: #e9e9e9;
   font-family: Exo 2;
+}
+.displayDiv{
+  color: white;
+  background-color: #893235;
+  padding:10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  margin:10%;
+}
+
+.rAISENOWDiv {
+  margin:10px;
+  letter-spacing: 0.29em;
+  line-height: 103.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 205px;
+  height: 46px;
+  line-height: 103.5%;
+  border-radius: 10px;
+  background-color: #660102;
+  cursor: pointer;
+  color:white;
 }
